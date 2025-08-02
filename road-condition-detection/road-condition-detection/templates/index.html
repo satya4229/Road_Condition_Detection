@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Road Condition Live Processing</title> 
+    <link rel="stylesheet" type="text/css" href="../static/style.css"> 
+</head> 
+<body> 
+    <div class="container"> 
+        <header> 
+            <h1>Road Condition Detector</h1> 
+        </header> 
+ 
+        <div class="input-section"> 
+            <div class="input-box" id="one-box"> 
+                <h3>Live Camera</h3> 
+                <button id="startCamera" class="primary-btn">Start Camera</button> 
+                <button id="stopCamera" class="danger-btn" style="display: none;">Stop 
+Camera</button> 
+            </div> 
+ 
+            <div class="input-box" id="two-box"> 
+                <h3>Video Upload</h3> 
+                <form id="uploadForm" enctype="multipart/form-data"> 
+                    <!-- Custom File Input --> 
+                    <label for="fileInput" class="custom-file-upload"> 
+                        Choose File 
+                    </label> 
+                    <span class="file-name" id="fileName">No file chosen</span> 
+                    <input type="file" id="fileInput" name="file" accept="video/*,image/*" required> 
+                     
+                    <button type="submit" class="primary-btn">Upload and Process</button> 
+                    <button type="button" id="abortButton" class="danger-btn" style="display: 
+none;">Abort Processing</button> 
+                </form> 
+            </div> 
+        </div> 
+ 
+        <div id="status" class="status-message"></div> 
+ 
+        <div id="liveStream" class="stream-container"> 
+            <h2>Live Processed Frames:</h2> 
+            <img id="videoFeed" src="#" alt="Live Stream" style="display:none;"> 
+        </div> 
+    </div> 
+    <audio id="alertSound" src="{{ url_for('static', filename='alert.mp3') }}"></audio> 
+    <script src="../static/script.js"></script> 
+</body> 
+</html> 

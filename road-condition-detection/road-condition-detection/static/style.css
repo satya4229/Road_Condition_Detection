@@ -1,0 +1,196 @@
+/* Modern CSS Reset */ 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+} 
+ 
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6; 
+    background-color: #f0f2f5; 
+    color: #333; 
+} 
+ 
+.container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 2rem; 
+} 
+ 
+header { 
+    text-align: center; 
+    margin-bottom: 2rem; 
+} 
+ 
+h1 { 
+    color: #1a73e8; 
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+} 
+ 
+h2 { 
+    color: #4285f4; 
+    font-size: 1.8rem; 
+    margin-bottom: 1rem; 
+} 
+ 
+h3 { 
+    color: #1a73e8; 
+    font-size: 1.5rem; 
+    margin-bottom: 1rem; 
+    text-align: center; 
+} 
+ 
+.input-section { 
+    display: flex; 
+    gap: 2rem; 
+    justify-content: center; 
+    background: white; 
+    padding: 2rem; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 2rem; 
+ 
+} 
+#one-box 
+{ 
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem; 
+    justify-content: center; 
+} 
+.input-box { 
+    flex: 1; 
+    background: white; 
+    padding: 2rem; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+} 
+ 
+#uploadForm { 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1rem; 
+} 
+ 
+input[type="file"] { 
+    width: 100%; 
+    padding: 0.5rem; 
+    border: 2px solid #e0e0e0; 
+    border-radius: 5px; 
+} 
+ 
+.primary-btn, .danger-btn { 
+    padding: 0.75rem 1.5rem; 
+    border: none; 
+    border-radius: 5px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    width: 200px; 
+    text-align: center; 
+} 
+ 
+.primary-btn { 
+    background-color: #1a73e8; 
+    color: white; 
+} 
+ 
+.primary-btn:hover { 
+    background-color: #1557b0; 
+    transform: translateY(-2px); 
+} 
+ 
+.danger-btn { 
+    background-color: #dc3545; 
+    color: white; 
+} 
+ 
+.danger-btn:hover { 
+    background-color: #bb2d3b; 
+    transform: translateY(-2px); 
+} 
+ 
+.status-message { 
+    padding: 1rem; 
+    margin: 1rem 0; 
+    border-radius: 5px; 
+    background-color: #e8f0fe; 
+    color: #1a73e8; 
+    text-align: center; 
+} 
+ 
+.stream-container { 
+    background: white; 
+    padding: 2rem; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+} 
+ 
+#videoFeed { 
+    width: 100%; 
+    max-width: 640px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 5px; 
+} 
+ 
+/* Responsive Design */ 
+@media (max-width: 768px) { 
+    .container { 
+        padding: 1rem; 
+    } 
+ 
+    .input-section { 
+        flex-direction: column; 
+    } 
+ 
+    h1 { 
+        font-size: 2rem; 
+    } 
+ 
+    .input-box { 
+        padding: 1rem; 
+    } 
+ 
+    .primary-btn, .danger-btn { 
+        width: 100%; 
+    } 
+} 
+/* Custom File Input Styling */ 
+#fileInput { 
+    display: none; /* Hide the default file input */ 
+} 
+ 
+.custom-file-upload { 
+    display: inline-block; 
+    padding: 0.75rem 1.5rem; 
+    background-color: #1a73e8; 
+    color: white; 
+    border-radius: 5px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    text-align: center; 
+    width: 200px; 
+} 
+ 
+.custom-file-upload:hover { 
+    background-color: #1557b0; 
+    transform: translateY(-2px); 
+} 
+ 
+.file-name { 
+    margin-top: 0.5rem; 
+    font-size: 0.9rem; 
+    color: #666; 
+    text-align: center; 
+} 
